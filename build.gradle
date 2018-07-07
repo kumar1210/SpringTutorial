@@ -35,6 +35,7 @@ repositories {
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter')
+	//command to extra local libs
 	compile files('lib/LocalServiceProvider.jar')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
