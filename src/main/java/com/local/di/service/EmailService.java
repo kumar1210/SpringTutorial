@@ -1,5 +1,8 @@
 package com.local.di.service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /***
  * 
  * @author gaurav's
@@ -8,11 +11,13 @@ package com.local.di.service;
  *
  */
 public class EmailService implements MessageService {
+	
+	Logger LOGGER = LoggerFactory.getLogger(EmailService.class);
 
 	@Override
 	public void sendMessage(String message, String recieverId) {
 		
-		System.out.println("This message "+ message +" will be sent to "+recieverId);
+		LOGGER.info("This message "+ message +" will be sent to "+recieverId);
 	}
 
 	
