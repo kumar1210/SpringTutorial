@@ -27,7 +27,10 @@ public class AopServiceTester {
 		LOG.info("Getting the student service bean");
 		StudentService serviceObj = (StudentService)context.getBean("studentService");
 		LOG.info("The name of student is "+serviceObj.getStudentName());
-		LOG.info("Testing aspect "+ serviceObj.getStudent().getName());
+		LOG.info("Testing aspect - {}", serviceObj.getStudent().getName());
+		LOG.info("Custom annotation testing ");
+		serviceObj.getStudent().setName("Vidhu");
+		
 		context.close();
 	}
 

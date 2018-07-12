@@ -12,6 +12,9 @@ import com.local.aop.bean.Student;
 
 /**
  * @author gaurav's
+ * 
+ * a configurer which is enabling the aspect 
+ * programming on the current application
  *
  */
 @Configuration

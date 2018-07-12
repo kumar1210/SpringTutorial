@@ -3,7 +3,7 @@
  */
 package com.local.aop.bean;
 
-import org.slf4j.LoggerFactory;
+import com.local.aop.annotation.Loggable;
 
 /**
  * @author gaurav's
@@ -24,13 +24,16 @@ public class Student {
 	 * @return the name
 	 */
 	public String getName() {
-		LoggerFactory.getLogger(getClass()).info("invoking getName()");
 		return name;
 	}
 
 	/**
 	 * @param name the name to set
+	 * 
+	 * here the marker interface for notifying aop
+	 *  
 	 */
+	@Loggable
 	public void setName(String name) {
 		this.name = name;
 	}
