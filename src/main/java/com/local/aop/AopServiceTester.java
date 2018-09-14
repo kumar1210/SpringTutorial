@@ -21,7 +21,7 @@ public class AopServiceTester {
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
 
 		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(StudentConfigurer.class);
 		LOG.info("Getting the student service bean");
@@ -30,7 +30,6 @@ public class AopServiceTester {
 		LOG.info("Testing aspect - {}", serviceObj.getStudent().getName());
 		LOG.info("Custom annotation testing ");
 		serviceObj.getStudent().setName("Vidhu");
-		
 		context.close();
 	}
 
